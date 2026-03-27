@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>今日のめぐり アカウント削除案内</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f6f1e8;
+        --surface: rgba(255, 252, 246, 0.92);
+        --text: #2a2420;
+        --muted: #645c56;
+        --line: #d7cab8;
+        --accent: #2d6a63;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top left, rgba(217, 196, 163, 0.35), transparent 26%),
+          linear-gradient(180deg, #fcf9f4 0%, var(--bg) 100%);
+      }
+      main { max-width: 920px; margin: 0 auto; padding: 52px 20px 80px; }
+      .hero, .section {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        box-shadow: 0 18px 50px rgba(66, 49, 28, 0.08);
+      }
+      .hero { padding: 36px 32px; margin-bottom: 20px; }
+      .section { padding: 28px 30px; margin-top: 16px; }
+      h1, h2 { margin: 0 0 14px; line-height: 1.3; }
+      p, li { color: var(--muted); line-height: 1.75; }
+      ul, ol { margin: 0; padding-left: 20px; }
+      a { color: var(--accent); }
+      .eyebrow {
+        display: inline-block;
+        margin-bottom: 12px;
+        color: var(--accent);
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 16px;
+        margin-top: 16px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .lang-nav {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 18px;
+      }
+      .lang-nav a {
+        display: inline-flex;
+        padding: 10px 14px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        text-decoration: none;
+        color: var(--text);
+        background: rgba(255, 255, 255, 0.65);
+      }
+      .lang-nav a.current {
+        background: var(--accent);
+        color: #fff;
+        border-color: var(--accent);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <span class="eyebrow">Delete Account</span>
+        <h1>今日のめぐり アカウント削除案内</h1>
+        <p>
+          `今日のめぐり` では、アプリ内から直接アカウント削除を行えます。
+          削除が完了すると、アカウントに紐づく主要なアプリデータは直ちに削除され、
+          自動的にログアウトされます。
+        </p>
+        <div class="meta">
+          <span>施行日: 2026年3月27日</span>
+          <span>運営者: studio nani</span>
+          <span>連絡先: <a href="mailto:studionani.official@google.com">studionani.official@google.com</a></span>
+        </div>
+        <nav class="lang-nav" aria-label="Language switcher">
+          <a href="/my-flow/delete-account/ko/">한국어</a>
+          <a href="/my-flow/delete-account/en/">English</a>
+          <a class="current" href="/my-flow/delete-account/ja/">日本語</a>
+        </nav>
+      </section>
+
+      <section class="section">
+        <h2>アプリ内での削除方法</h2>
+        <ol>
+          <li>アプリにログインします。</li>
+          <li>`내 사주` 画面を開きます。</li>
+          <li>`탈퇴하기` を選択します。</li>
+          <li>確認後、削除を完了します。</li>
+        </ol>
+      </section>
+
+      <section class="section">
+        <h2>直ちに削除される項目</h2>
+        <ul>
+          <li>アカウント</li>
+          <li>保存済みプロフィール情報</li>
+          <li>最近の照会履歴</li>
+          <li>照会利用記録</li>
+          <li>現在の entitlement 状態</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>補足案内</h2>
+        <ul>
+          <li>削除完了後、アプリは自動的にログアウトされます。</li>
+          <li>アプリを削除するだけでは、リモート上のアカウントデータが自動削除されない場合があります。</li>
+          <li>購入検証、紛争対応、運営記録確認のため、一部の購入関連記録は法令または運営基準に従って別途保管される場合があります。</li>
+          <li>アカウントを削除せずに、データの一部だけを利用者自身で選んで削除する機能は現在提供していません。</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
