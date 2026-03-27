@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Today, Aligned Privacy Policy</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f6f1e8;
+        --surface: rgba(255, 252, 246, 0.92);
+        --text: #2a2420;
+        --muted: #645c56;
+        --line: #d7cab8;
+        --accent: #2d6a63;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "SUIT", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top left, rgba(217, 196, 163, 0.35), transparent 26%),
+          linear-gradient(180deg, #fcf9f4 0%, var(--bg) 100%);
+      }
+      main { max-width: 920px; margin: 0 auto; padding: 52px 20px 80px; }
+      .hero, .section {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        box-shadow: 0 18px 50px rgba(66, 49, 28, 0.08);
+      }
+      .hero { padding: 36px 32px; margin-bottom: 20px; }
+      .section { padding: 28px 30px; margin-top: 16px; }
+      h1, h2 { margin: 0 0 14px; line-height: 1.3; }
+      p, li, td { color: var(--muted); line-height: 1.75; }
+      ul { margin: 0; padding-left: 20px; }
+      a { color: var(--accent); }
+      .eyebrow {
+        display: inline-block;
+        margin-bottom: 12px;
+        color: var(--accent);
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 16px;
+        margin-top: 16px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+      th, td {
+        padding: 14px 12px;
+        border-top: 1px solid var(--line);
+        text-align: left;
+        vertical-align: top;
+      }
+      th { color: var(--text); width: 26%; }
+      .note { font-size: 14px; }
+      .lang-nav {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 18px;
+      }
+      .lang-nav a {
+        display: inline-flex;
+        padding: 10px 14px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        text-decoration: none;
+        color: var(--text);
+        background: rgba(255, 255, 255, 0.65);
+      }
+      .lang-nav a.current {
+        background: var(--accent);
+        color: #fff;
+        border-color: var(--accent);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <span class="eyebrow">Privacy Policy</span>
+        <h1>Today, Aligned Privacy Policy</h1>
+        <p>
+          `Today, Aligned` is a Saju-based personal report app. We process personal
+          data only to the extent needed to save profiles, support sign-in, restore
+          purchases, and show recent lookups. This policy applies only to the
+          `Today, Aligned` app.
+        </p>
+        <div class="meta">
+          <span>Effective date: March 27, 2026</span>
+          <span>Operator: studio nani</span>
+          <span>Contact: <a href="mailto:support@studionani.io">support@studionani.io</a></span>
+        </div>
+        <nav class="lang-nav" aria-label="Language switcher">
+          <a href="/my-flow/privacy/my-flow/">한국어</a>
+          <a class="current" href="/my-flow/privacy/my-flow/en/">English</a>
+          <a href="/my-flow/privacy/my-flow/ja/">日本語</a>
+        </nav>
+      </section>
+
+      <section class="section">
+        <h2>1. Information We Collect</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Examples</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Account information</th>
+              <td>Email address, sign-in provider identifiers, user ID</td>
+              <td>Sign-in, account identification, purchase restore, separating data by user</td>
+            </tr>
+            <tr>
+              <th>Profile information</th>
+              <td>Profile name, birth date, birth time, solar/lunar/leap month status</td>
+              <td>Create a personal Saju profile and generate reports</td>
+            </tr>
+            <tr>
+              <th>Usage information</th>
+              <td>Recent lookup dates, report summaries, monthly lookup usage count</td>
+              <td>Show recent lookups, operate free usage limits, review product quality</td>
+            </tr>
+            <tr>
+              <th>Purchase and entitlement information</th>
+              <td>Product IDs, entitlement status, restore processing records</td>
+              <td>Unlock paid features, restore purchases, prevent duplicate processing</td>
+            </tr>
+            <tr>
+              <th>On-device stored data</th>
+              <td>Local profiles, recent lookups, sign-in sessions</td>
+              <td>Resume use after restart and support guest mode</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>2. How We Use Information</h2>
+        <ul>
+          <li>To save user profiles and generate personal reports</li>
+          <li>To support sign-in, account identification, and cross-device restore</li>
+          <li>To reflect purchase history and entitlement status</li>
+          <li>To show recent lookups and basic usage records</li>
+          <li>To monitor service stability and respond to issues</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>3. Third-Party Services</h2>
+        <p>`Today, Aligned` uses the following external services:</p>
+        <ul>
+          <li>Supabase: authentication, user profile storage, entitlement and purchase sync</li>
+          <li>Google Sign-In / Apple Sign-In: social sign-in</li>
+          <li>Google Play / Apple App Store: in-app purchases and restore processing</li>
+        </ul>
+        <p class="note">The actual processing scope of each service is also subject to that provider's own policies.</p>
+      </section>
+
+      <section class="section">
+        <h2>4. Retention and Deletion</h2>
+        <ul>
+          <li>Data tied to a signed-in account may be retained while the account remains active.</li>
+          <li>Local device data may be removed when the app is deleted or local storage is reset.</li>
+          <li>When account deletion is requested, related data will be deleted or de-identified except where retention is required for operation or law.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>5. Your Rights</h2>
+        <ul>
+          <li>Users may contact us by email regarding sign-in information, profile data, and purchase-related matters.</li>
+          <li>Requests related to account deletion or data deletion may be submitted to the contact below.</li>
+          <li>Deleting the app alone may not automatically delete remote account data.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>6. Children's Privacy</h2>
+        <p>
+          `Today, Aligned` is not designed as an app primarily directed to children,
+          and it is not operated with children as its primary target audience.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>7. Contact</h2>
+        <p>
+          studio nani<br />
+          Email: <a href="mailto:support@studionani.io">support@studionani.io</a>
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
