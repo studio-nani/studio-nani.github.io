@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>studio nani 개인정보처리방침</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f7f3ec;
+        --surface: rgba(255, 252, 246, 0.9);
+        --text: #2b2522;
+        --muted: #6f665f;
+        --line: #ddd0be;
+        --accent: #2d6a63;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "SUIT", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+        background:
+          radial-gradient(circle at top left, rgba(214, 197, 171, 0.35), transparent 28%),
+          linear-gradient(180deg, #fbf8f2 0%, var(--bg) 100%);
+        color: var(--text);
+      }
+
+      main {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 56px 24px 72px;
+      }
+
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        padding: 32px;
+        box-shadow: 0 18px 50px rgba(69, 54, 35, 0.08);
+      }
+
+      h1,
+      h2 {
+        margin: 0 0 16px;
+        line-height: 1.25;
+      }
+
+      p,
+      li {
+        color: var(--muted);
+        line-height: 1.75;
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+
+      a {
+        color: var(--accent);
+      }
+
+      .eyebrow {
+        display: inline-block;
+        margin-bottom: 12px;
+        color: var(--accent);
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .apps {
+        display: grid;
+        gap: 16px;
+        margin-top: 28px;
+      }
+
+      .app-link {
+        display: block;
+        padding: 20px 22px;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.55);
+        text-decoration: none;
+      }
+
+      .app-link strong {
+        display: block;
+        color: var(--text);
+        margin-bottom: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="card">
+        <span class="eyebrow">studio nani</span>
+        <h1>개인정보처리방침 안내</h1>
+        <p>
+          studio nani는 앱별 실제 데이터 처리 방식에 맞춰 개인정보처리방침을 개별 제공합니다.
+          아래 목록에서 사용하는 앱의 정책 페이지로 이동해 주세요.
+        </p>
+
+        <div class="apps">
+          <a class="app-link" href="/my-flow/privacy/my-flow/">
+            <strong>나의 흐름</strong>
+            <span>사주 기반 개인 리포트 앱 개인정보처리방침</span>
+          </a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
