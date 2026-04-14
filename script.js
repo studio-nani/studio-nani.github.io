@@ -30,6 +30,10 @@ function resolveLanguage() {
 let currentSource = resolveSource();
 let currentLang = resolveLanguage();
 
+function i18nKey(lang) {
+  return `i18n${lang.charAt(0).toUpperCase()}${lang.slice(1)}`;
+}
+
 function setLanguage(lang) {
   currentLang = lang;
   document.documentElement.lang = lang;
@@ -43,7 +47,7 @@ function setLanguage(lang) {
 
 function localize() {
   document.querySelectorAll("[data-i18n]").forEach((el) => {
-    const value = el.dataset[`i18n${currentLang.toUpperCase()}`];
+    const value = el.dataset[i18nKey(currentLang)];
     if (value) el.textContent = value;
   });
 
