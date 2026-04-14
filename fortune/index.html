@@ -5,86 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>운세문방구 | Studio Nani</title>
     <meta name="description" content="운세문방구 설치 페이지입니다." />
-    <meta name="theme-color" content="#f7f7f4" />
+    <meta name="theme-color" content="#141211" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=Noto+Sans+JP:wght@400;500;700;800;900&family=SUIT:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/styles.css?v=27091bd" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;800&family=SUIT:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css?v=dark-hub-1" />
   </head>
-  <body>
+  <body data-page="product" data-product="fortune">
     <main class="page">
-      <header class="topbar">
-        <a class="brand" href="/" data-propagate-source aria-label="Studio Nani home">
-          <img src="/assets/logo.png" alt="" />
-          <span>Studio Nani</span>
-        </a>
-        <div class="language-switch" aria-label="Language">
-          <button class="lang-btn" type="button" data-lang="ko">KO</button>
-          <button class="lang-btn" type="button" data-lang="en">EN</button>
-          <button class="lang-btn" type="button" data-lang="ja">JA</button>
-        </div>
-      </header>
-
-      <section class="product-layout" aria-labelledby="product-title">
-        <div class="product-copy">
-          <p class="eyebrow">Fortune Stationery</p>
-          <h1
-            id="product-title"
-            data-i18n
-            data-i18n-ko="운세문방구"
-            data-i18n-en="Fortune Stationery"
-            data-i18n-ja="おみくじ文房具店"
-          >운세문방구</h1>
-          <p
-            class="subtitle"
-            data-i18n
-            data-i18n-ko="짧게 열고, 귀엽게 확인하는 레트로 운세 장난감."
-            data-i18n-en="A cute retro fortune toy for quick daily moments."
-            data-i18n-ja="気軽に開いて楽しめる、レトロなおみくじトイ。"
-          >짧게 열고, 귀엽게 확인하는 레트로 운세 장난감.</p>
-          <ul class="feature-list">
-            <li
-              data-i18n
-              data-i18n-ko="복잡한 가입 없이 바로 운세를 확인합니다."
-              data-i18n-en="Open the app and check a quick fortune without a heavy setup."
-              data-i18n-ja="面倒な設定なしで、すぐにおみくじを楽しめます。"
-            >복잡한 가입 없이 바로 운세를 확인합니다.</li>
-            <li
-              data-i18n
-              data-i18n-ko="가벼운 소셜 유입에 맞는 짧은 사용 흐름을 유지합니다."
-              data-i18n-en="The flow stays short enough for social profile traffic."
-              data-i18n-ja="SNSプロフィールからの流入でも使いやすい短い体験です。"
-            >가벼운 소셜 유입에 맞는 짧은 사용 흐름을 유지합니다.</li>
-          </ul>
-        </div>
-
-        <aside class="panel product-card" aria-label="Install Fortune Stationery">
-          <img class="product-icon" src="/assets/fortune.png" alt="운세문방구 icon" />
-          <h2
-            data-i18n
-            data-i18n-ko="스토어에서 설치"
-            data-i18n-en="Install from the store"
-            data-i18n-ja="ストアでインストール"
-          >스토어에서 설치</h2>
-          <p
-            data-i18n
-            data-i18n-ko="사용 중인 기기의 스토어로 이동하세요."
-            data-i18n-en="Open the store for your device."
-            data-i18n-ja="お使いの端末のストアを開いてください。"
-          >사용 중인 기기의 스토어로 이동하세요.</p>
-          <div class="btn-group">
-            <a class="btn" href="https://apps.apple.com/app/id6757841417" data-store-link data-app="fortune" data-store="ios">App Store</a>
-            <a class="btn alt" href="https://play.google.com/store/apps/details?id=com.fortune.stationery" data-store-link data-app="fortune" data-store="android">Google Play</a>
+      <section class="hero product-hero reveal" aria-labelledby="product-title">
+        <div class="hero-top">
+          <div class="brand-lockup">
+            <div class="logo-wrap">
+              <img id="product-icon" src="/assets/fortune.png" alt="" class="logo" />
+            </div>
+            <div class="hero-copy">
+              <p class="eyebrow" id="product-kicker">Fortune Stationery</p>
+              <h1 id="product-title">운세문방구</h1>
+              <p class="subtitle" id="product-description">짧게 열고, 귀엽게 확인하는 레트로 운세 장난감.</p>
+            </div>
           </div>
-        </aside>
+          <div class="language-switch" aria-label="Language switcher">
+            <button type="button" class="lang-btn" data-lang="en">EN</button>
+            <button type="button" class="lang-btn" data-lang="ko">KO</button>
+            <button type="button" class="lang-btn" data-lang="ja">JA</button>
+          </div>
+        </div>
       </section>
 
-      <footer class="footer">
-        <div class="utility-links">
-          <a href="/" data-propagate-source>Studio Nani</a>
+      <section class="panel reveal" aria-labelledby="install-title">
+        <div class="section-head">
+          <p class="section-kicker" data-i18n="product.installKicker">Install</p>
+          <h2 id="install-title" data-i18n="product.installTitle">스토어에서 설치</h2>
+          <p data-i18n="product.installDescription">사용 중인 기기의 스토어로 이동하세요.</p>
         </div>
+        <div id="product-actions" class="product-actions"></div>
+      </section>
+
+      <section class="panel reveal" aria-labelledby="details-title">
+        <div class="section-head compact">
+          <p class="section-kicker" data-i18n="product.detailsKicker">Details</p>
+          <h2 id="details-title" data-i18n="product.detailsTitle">제품 메모</h2>
+        </div>
+        <ul id="product-features" class="feature-list"></ul>
+      </section>
+
+      <footer class="footer reveal">
+        <p><a href="/" data-propagate-source>Studio Nani</a></p>
       </footer>
     </main>
-    <script src="/script.js?v=27091bd"></script>
+
+    <script src="/script.js?v=dark-hub-1"></script>
   </body>
 </html>

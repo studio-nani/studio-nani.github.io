@@ -5,167 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Studio Nani</title>
     <meta name="description" content="Studio Nani 앱을 설치하고 제품 정보를 확인하세요." />
-    <meta name="theme-color" content="#f7f7f4" />
+    <meta name="theme-color" content="#141211" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=Noto+Sans+JP:wght@400;500;700;800;900&family=SUIT:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/styles.css?v=27091bd" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;800&family=SUIT:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css?v=dark-hub-1" />
   </head>
-  <body>
+  <body data-page="home">
     <main class="page">
-      <header class="topbar">
-        <a class="brand" href="/" aria-label="Studio Nani home">
-          <img src="/assets/logo.png" alt="" />
-          <span>Studio Nani</span>
-        </a>
-        <div class="language-switch" aria-label="Language">
-          <button class="lang-btn" type="button" data-lang="ko">KO</button>
-          <button class="lang-btn" type="button" data-lang="en">EN</button>
-          <button class="lang-btn" type="button" data-lang="ja">JA</button>
-        </div>
-      </header>
-
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p
-            class="eyebrow"
-            data-i18n
-            data-i18n-ko="Studio Nani"
-            data-i18n-en="Studio Nani"
-            data-i18n-ja="Studio Nani"
-          >Studio Nani</p>
-          <h1
-            id="hero-title"
-            data-i18n
-            data-i18n-ko="조용하지만 분명한 앱을 만듭니다."
-            data-i18n-en="Apps with a quiet point of view."
-            data-i18n-ja="静かだけど、意図がはっきりしたアプリ。"
-          >조용하지만 분명한 앱을 만듭니다.</h1>
-          <p
-            class="subtitle"
-            data-i18n
-            data-i18n-ko="Studio Nani의 앱을 설치하고, 각 제품의 안내 페이지로 이동하세요."
-            data-i18n-en="Install Studio Nani apps and open each product page."
-            data-i18n-ja="Studio Naniのアプリをインストールし、各プロダクトページを開けます。"
-          >Studio Nani의 앱을 설치하고, 각 제품의 안내 페이지로 이동하세요.</p>
-        </div>
-        <div class="hero-note">
-          <p
-            data-i18n
-            data-i18n-ko="소셜 프로필에서 들어왔다면 아래 앱을 고르고 바로 스토어로 이동하세요."
-            data-i18n-en="Choose an app below and go straight to the store."
-            data-i18n-ja="下のアプリを選んで、そのままストアへ移動してください。"
-          >소셜 프로필에서 들어왔다면 아래 앱을 고르고 바로 스토어로 이동하세요.</p>
-          <p
-            data-i18n
-            data-i18n-ko="제품 설명은 짧게, 설치 버튼은 먼저 보이게 정리했습니다."
-            data-i18n-en="Product notes stay short, with store actions kept first."
-            data-i18n-ja="説明は短く、インストール導線を先に置いています。"
-          >제품 설명은 짧게, 설치 버튼은 먼저 보이게 정리했습니다.</p>
-        </div>
-      </section>
-
-      <section aria-labelledby="apps-title">
-        <div class="section-head">
-          <div>
-            <p
-              class="section-kicker"
-              data-i18n
-              data-i18n-ko="Apps"
-              data-i18n-en="Apps"
-              data-i18n-ja="Apps"
-            >Apps</p>
-            <h2
-              id="apps-title"
-              data-i18n
-              data-i18n-ko="앱 설치"
-              data-i18n-en="Install Apps"
-              data-i18n-ja="アプリをインストール"
-            >앱 설치</h2>
+      <section class="hero reveal" aria-labelledby="hero-title">
+        <div class="hero-top">
+          <div class="brand-lockup">
+            <div class="logo-wrap">
+              <img src="/assets/logo.png" alt="Studio Nani" class="logo" />
+            </div>
+            <div class="hero-copy">
+              <p class="eyebrow" data-i18n="root.eyebrow">STUDIO NANI</p>
+              <h1 id="hero-title" data-i18n="root.heroTitle">조용하지만 분명한 앱을 만듭니다.</h1>
+              <p class="subtitle" data-i18n="root.heroDescription">
+                Studio Nani의 최신 앱을 바로 설치하고 브랜드를 가까이 두세요.
+              </p>
+            </div>
           </div>
-          <p
-            data-i18n
-            data-i18n-ko="제품 설명은 앱 페이지에서 보고, 설치는 스토어 버튼으로 바로 이동하세요."
-            data-i18n-en="Read product notes on each app page, then go straight to the store."
-            data-i18n-ja="各アプリページで内容を確認し、ストアへ移動できます。"
-          >제품 설명은 앱 페이지에서 보고, 설치는 스토어 버튼으로 바로 이동하세요.</p>
+          <div class="language-switch" aria-label="Language switcher">
+            <button type="button" class="lang-btn" data-lang="en">EN</button>
+            <button type="button" class="lang-btn" data-lang="ko">KO</button>
+            <button type="button" class="lang-btn" data-lang="ja">JA</button>
+          </div>
         </div>
 
-        <div class="app-grid">
-          <article class="app-card">
-            <img src="/assets/fortune.png" alt="운세문방구 icon" />
-            <div class="app-copy">
-              <p class="meta">Fortune Stationery</p>
-              <h3
-                data-i18n
-                data-i18n-ko="운세문방구"
-                data-i18n-en="Fortune Stationery"
-                data-i18n-ja="おみくじ文房具店"
-              >운세문방구</h3>
-              <p
-                data-i18n
-                data-i18n-ko="짧게 즐기기 좋은 레트로 감성 운세 장난감."
-                data-i18n-en="Cute retro fortune toys, made for quick daily delight."
-                data-i18n-ja="気軽に楽しめるレトロな占いトイ。"
-              >짧게 즐기기 좋은 레트로 감성 운세 장난감.</p>
-              <div class="btn-group">
-                <a class="btn" href="https://apps.apple.com/app/id6757841417" data-store-link data-app="fortune" data-store="ios">App Store</a>
-                <a class="btn alt" href="https://play.google.com/store/apps/details?id=com.fortune.stationery" data-store-link data-app="fortune" data-store="android">Google Play</a>
-                <a
-                  class="btn ghost"
-                  href="/fortune/"
-                  data-propagate-source
-                  data-i18n
-                  data-i18n-ko="제품 페이지"
-                  data-i18n-en="Product Page"
-                  data-i18n-ja="プロダクトページ"
-                >제품 페이지</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="app-card">
-            <img src="/assets/my-flow.png" alt="나의 흐름 icon" />
-            <div class="app-copy">
-              <p class="meta">Today, Aligned</p>
-              <h3
-                data-i18n
-                data-i18n-ko="나의 흐름"
-                data-i18n-en="Today, Aligned"
-                data-i18n-ja="今日のめぐり"
-              >나의 흐름</h3>
-              <p
-                data-i18n
-                data-i18n-ko="내 사주를 저장하고 오늘, 특정 날짜, 이번주와 앞으로의 흐름을 조용한 리포트로 확인하세요."
-                data-i18n-en="Save your birth chart profile and read today, key dates, and longer-term guidance in a calm report format."
-                data-i18n-ja="自分の命式を保存し、今日や気になる日、今週から今年までの流れを静かなレポートで確認できます。"
-              >내 사주를 저장하고 오늘, 특정 날짜, 이번주와 앞으로의 흐름을 조용한 리포트로 확인하세요.</p>
-              <div class="btn-group">
-                <a class="btn alt" href="https://play.google.com/store/apps/details?id=io.studionani.myflow" data-store-link data-app="my_flow" data-store="android">Google Play</a>
-                <a
-                  class="btn ghost"
-                  href="/my-flow/"
-                  data-propagate-source
-                  data-i18n
-                  data-i18n-ko="제품 페이지"
-                  data-i18n-en="Product Page"
-                  data-i18n-ja="プロダクトページ"
-                >제품 페이지</a>
-              </div>
-            </div>
-          </article>
+        <div class="hero-note">
+          <p class="hero-kicker" data-i18n="root.heroKicker">설치 우선</p>
+          <p class="hero-support" data-i18n="root.heroSupport">
+            아래에서 앱을 고르고 바로 스토어로 이동하세요.
+          </p>
         </div>
       </section>
 
-      <footer class="footer">
-        <p>Studio Nani</p>
-        <div class="legal-links">
-          <a href="/my-flow/privacy/ko/">나의 흐름 개인정보처리방침</a>
-          <a href="/my-flow/terms/ko/">나의 흐름 이용약관</a>
-          <a href="/my-flow/delete-account/ko/">나의 흐름 회원탈퇴 안내</a>
+      <section class="panel reveal" aria-labelledby="apps-title">
+        <div class="section-head">
+          <p class="section-kicker" data-i18n="root.appsKicker">Apps</p>
+          <h2 id="apps-title" data-i18n="root.appsTitle">앱 설치</h2>
+          <p data-i18n="root.appsDescription">앱을 하나 고르고 App Store 또는 Google Play로 이동하세요.</p>
         </div>
+        <div id="app-list" class="stack"></div>
+      </section>
+
+      <section class="info-grid reveal" aria-label="Studio Nani details">
+        <article class="panel info-card" aria-labelledby="brand-title">
+          <div class="section-head compact">
+            <p class="section-kicker" data-i18n="root.brandKicker">Studio Nani</p>
+            <h2 id="brand-title" data-i18n="root.brandTitle">작지만 구조가 선명한 스튜디오.</h2>
+          </div>
+          <p class="info-copy" data-i18n="root.brandDescription">
+            Studio Nani는 조용한 인터페이스, 정확한 카피, 반복 가능한 카드 구조를 가진 유틸리티 앱을 만듭니다.
+          </p>
+        </article>
+
+        <article class="panel info-card" aria-labelledby="links-title">
+          <div class="section-head compact">
+            <p class="section-kicker" data-i18n="root.linksKicker">Links</p>
+            <h2 id="links-title" data-i18n="root.linksTitle">브랜드 더 보기</h2>
+          </div>
+          <div id="social-links" class="link-list"></div>
+        </article>
+      </section>
+
+      <footer class="footer reveal">
+        <p data-i18n="root.footer">Studio Nani 앱 설치에 집중한 링크 페이지입니다.</p>
       </footer>
     </main>
-    <script src="/script.js?v=27091bd"></script>
+
+    <script src="/script.js?v=dark-hub-1"></script>
   </body>
 </html>

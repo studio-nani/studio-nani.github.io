@@ -5,106 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>나의 흐름 | Studio Nani</title>
     <meta name="description" content="나의 흐름 설치 및 제품 안내 페이지입니다." />
-    <meta name="theme-color" content="#f7f7f4" />
+    <meta name="theme-color" content="#141211" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=Noto+Sans+JP:wght@400;500;700;800;900&family=SUIT:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/styles.css?v=27091bd" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;800&family=SUIT:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css?v=dark-hub-1" />
   </head>
-  <body>
+  <body data-page="product" data-product="myFlow">
     <main class="page">
-      <header class="topbar">
-        <a class="brand" href="/" data-propagate-source aria-label="Studio Nani home">
-          <img src="/assets/logo.png" alt="" />
-          <span>Studio Nani</span>
-        </a>
-        <div class="language-switch" aria-label="Language">
-          <button class="lang-btn" type="button" data-lang="ko">KO</button>
-          <button class="lang-btn" type="button" data-lang="en">EN</button>
-          <button class="lang-btn" type="button" data-lang="ja">JA</button>
-        </div>
-      </header>
-
-      <section class="product-layout" aria-labelledby="product-title">
-        <div class="product-copy">
-          <p class="eyebrow">Today, Aligned</p>
-          <h1
-            id="product-title"
-            data-i18n
-            data-i18n-ko="나의 흐름"
-            data-i18n-en="Today, Aligned"
-            data-i18n-ja="今日のめぐり"
-          >나의 흐름</h1>
-          <p
-            class="subtitle"
-            data-i18n
-            data-i18n-ko="내 사주를 저장하고 오늘, 특정 날짜, 이번주와 앞으로의 흐름을 조용한 리포트로 확인하세요."
-            data-i18n-en="Save your birth chart profile and read today, key dates, and longer-term guidance in a calm report format."
-            data-i18n-ja="自分の命式を保存し、今日や気になる日、今週から今年までの流れを静かなレポートで確認できます。"
-          >내 사주를 저장하고 오늘, 특정 날짜, 이번주와 앞으로의 흐름을 조용한 리포트로 확인하세요.</p>
-          <ul class="feature-list">
-            <li
-              data-i18n
-              data-i18n-ko="생년월일시 기반 프로필을 저장하고 반복 조회합니다."
-              data-i18n-en="Save your birth chart profile and keep repeat lookups together."
-              data-i18n-ja="生年月日をもとにプロフィールを保存し、繰り返し確認できます。"
-            >생년월일시 기반 프로필을 저장하고 반복 조회합니다.</li>
-            <li
-              data-i18n
-              data-i18n-ko="오늘, 특정 날짜, 이번주, 이번달, 올해 흐름을 같은 구조로 읽습니다."
-              data-i18n-en="Read today, key dates, this week, this month, and this year in one report structure."
-              data-i18n-ja="今日、気になる日、今週、今月、今年の流れを同じ構造で読めます。"
-            >오늘, 특정 날짜, 이번주, 이번달, 올해 흐름을 같은 구조로 읽습니다.</li>
-            <li
-              data-i18n
-              data-i18n-ko="결과는 요약, 근거, 적용 포인트 중심으로 정리됩니다."
-              data-i18n-en="Reports focus on summary, evidence, and practical next steps."
-              data-i18n-ja="レポートは要約、根拠、活用ポイントを中心に整理されます。"
-            >결과는 요약, 근거, 적용 포인트 중심으로 정리됩니다.</li>
-          </ul>
-        </div>
-
-        <aside class="panel product-card" aria-label="Install Today, Aligned">
-          <img class="product-icon" src="/assets/my-flow.png" alt="나의 흐름 icon" />
-          <h2
-            data-i18n
-            data-i18n-ko="스토어에서 설치"
-            data-i18n-en="Install from the store"
-            data-i18n-ja="ストアでインストール"
-          >스토어에서 설치</h2>
-          <p
-            data-i18n
-            data-i18n-ko="현재 공개 준비 중인 스토어로 이동합니다."
-            data-i18n-en="Open the store listing prepared for release."
-            data-i18n-ja="公開準備中のストアページを開きます。"
-          >현재 공개 준비 중인 스토어로 이동합니다.</p>
-          <div class="btn-group">
-            <a class="btn alt" href="https://play.google.com/store/apps/details?id=io.studionani.myflow" data-store-link data-app="my_flow" data-store="android">Google Play</a>
-          </div>
-
-          <div class="legal-strip">
-            <p
-              data-i18n
-              data-i18n-ko="앱 운영 문서"
-              data-i18n-en="App documents"
-              data-i18n-ja="アプリ運営文書"
-            >앱 운영 문서</p>
-            <div class="legal-links">
-              <a href="/my-flow/privacy/ko/">개인정보처리방침</a>
-              <a href="/my-flow/terms/ko/">이용약관</a>
-              <a href="/my-flow/delete-account/ko/">회원탈퇴 안내</a>
-              <a href="/my-flow/auth-bridge.html">계정 연결 브리지</a>
+      <section class="hero product-hero reveal" aria-labelledby="product-title">
+        <div class="hero-top">
+          <div class="brand-lockup">
+            <div class="logo-wrap">
+              <img id="product-icon" src="/assets/my-flow.png" alt="" class="logo" />
+            </div>
+            <div class="hero-copy">
+              <p class="eyebrow" id="product-kicker">Today, Aligned</p>
+              <h1 id="product-title">나의 흐름</h1>
+              <p class="subtitle" id="product-description">
+                내 사주를 저장하고 오늘, 특정 날짜, 이번주와 앞으로의 흐름을 조용한 리포트로 확인하세요.
+              </p>
             </div>
           </div>
-        </aside>
+          <div class="language-switch" aria-label="Language switcher">
+            <button type="button" class="lang-btn" data-lang="en">EN</button>
+            <button type="button" class="lang-btn" data-lang="ko">KO</button>
+            <button type="button" class="lang-btn" data-lang="ja">JA</button>
+          </div>
+        </div>
       </section>
 
-      <footer class="footer">
-        <div class="utility-links">
-          <a href="/" data-propagate-source>Studio Nani</a>
+      <section class="panel reveal" aria-labelledby="install-title">
+        <div class="section-head">
+          <p class="section-kicker" data-i18n="product.installKicker">Install</p>
+          <h2 id="install-title" data-i18n="product.installTitle">스토어에서 설치</h2>
+          <p data-i18n="product.installDescription">사용 중인 기기의 스토어로 이동하세요.</p>
         </div>
+        <div id="product-actions" class="product-actions"></div>
+      </section>
+
+      <section class="panel reveal" aria-labelledby="details-title">
+        <div class="section-head compact">
+          <p class="section-kicker" data-i18n="product.detailsKicker">Details</p>
+          <h2 id="details-title" data-i18n="product.detailsTitle">제품 메모</h2>
+        </div>
+        <ul id="product-features" class="feature-list"></ul>
+      </section>
+
+      <section class="panel reveal" aria-labelledby="legal-title">
+        <div class="section-head compact">
+          <p class="section-kicker" data-i18n="product.legalKicker">Documents</p>
+          <h2 id="legal-title" data-i18n="product.legalTitle">앱 운영 문서</h2>
+        </div>
+        <div id="legal-links" class="link-list"></div>
+      </section>
+
+      <footer class="footer reveal">
+        <p><a href="/" data-propagate-source>Studio Nani</a></p>
       </footer>
     </main>
-    <script src="/script.js?v=27091bd"></script>
+
+    <script src="/script.js?v=dark-hub-1"></script>
   </body>
 </html>
