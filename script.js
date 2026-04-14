@@ -14,8 +14,7 @@ const I18N = {
       brandDescription:
         "Studio Nani는 조용한 인터페이스, 정확한 카피, 반복 가능한 카드 구조를 가진 유틸리티 앱을 만듭니다.",
       linksKicker: "Links",
-      linksTitle: "브랜드 더 보기",
-      footer: "Studio Nani 앱 설치에 집중한 링크 페이지입니다."
+      linksTitle: "브랜드 더 보기"
     },
     product: {
       installKicker: "Install",
@@ -75,8 +74,7 @@ const I18N = {
     legal: {
       privacy: "개인정보처리방침",
       terms: "이용약관",
-      deleteAccount: "회원탈퇴 안내",
-      authBridge: "계정 연결 브리지"
+      deleteAccount: "회원탈퇴 안내"
     }
   },
   en: {
@@ -94,8 +92,7 @@ const I18N = {
       brandDescription:
         "We build playful utility apps with calm interfaces, precise copy, and repeatable card systems.",
       linksKicker: "Links",
-      linksTitle: "Stay connected",
-      footer: "A focused page for installing Studio Nani apps."
+      linksTitle: "Stay connected"
     },
     product: {
       installKicker: "Install",
@@ -155,8 +152,7 @@ const I18N = {
     legal: {
       privacy: "Privacy Policy",
       terms: "Terms of Use",
-      deleteAccount: "Account Deletion",
-      authBridge: "Account Bridge"
+      deleteAccount: "Account Deletion"
     }
   },
   ja: {
@@ -174,8 +170,7 @@ const I18N = {
       brandDescription:
         "Studio Naniは、静かなUI、正確なコピー、繰り返し使えるカード構造を持つユーティリティアプリを作ります。",
       linksKicker: "Links",
-      linksTitle: "関連リンク",
-      footer: "Studio Naniアプリのインストールに集中したリンクページです。"
+      linksTitle: "関連リンク"
     },
     product: {
       installKicker: "Install",
@@ -235,8 +230,7 @@ const I18N = {
     legal: {
       privacy: "プライバシーポリシー",
       terms: "利用規約",
-      deleteAccount: "アカウント削除",
-      authBridge: "アカウント連携ブリッジ"
+      deleteAccount: "アカウント削除"
     }
   }
 };
@@ -257,8 +251,7 @@ const PRODUCTS = {
     legalLinks: [
       { key: "privacy", url: "/my-flow/privacy/ko/" },
       { key: "terms", url: "/my-flow/terms/ko/" },
-      { key: "deleteAccount", url: "/my-flow/delete-account/ko/" },
-      { key: "authBridge", url: "/my-flow/auth-bridge.html" }
+      { key: "deleteAccount", url: "/my-flow/delete-account/ko/" }
     ]
   }
 };
