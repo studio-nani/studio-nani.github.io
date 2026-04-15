@@ -363,8 +363,8 @@ function renderSocialLinks() {
 
   root.innerHTML = t.links
     .map(
-      (link) => `
-      <a class="link-row" href="${link.url}" target="_blank" rel="noreferrer">
+      (link, index) => `
+      <button class="link-row" type="button" data-social-index="${index}">
         <div class="link-main">
           <span class="link-badge" aria-hidden="true">${link.badge}</span>
           <div class="link-copy">
@@ -373,7 +373,7 @@ function renderSocialLinks() {
           </div>
         </div>
         <span class="link-arrow" aria-hidden="true">↗</span>
-      </a>
+      </button>
     `
     )
     .join("");
@@ -451,5 +451,17 @@ function bindLanguageSwitch() {
   });
 }
 
+function bindSocialLinks() {
+  document.addEventListener("click", (event) => {
+    const row = event.target.closest("[data-social-index]");
+    if (!row) return;
+
+    const link = t.links[Number(row.dataset.socialIndex)];
+    if (!link?.url) return;
+    window.open(link.url, "_blank", "noopener,noreferrer");
+  });
+}
+
 bindLanguageSwitch();
+bindSocialLinks();
 render();

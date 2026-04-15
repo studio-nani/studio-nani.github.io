@@ -321,12 +321,15 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   gap: 12px;
   padding: 12px 14px;
   border: 1px solid var(--line);
   background: rgba(255, 253, 249, 0.72);
   color: var(--text);
+  cursor: pointer;
   text-decoration: none;
+  text-align: left;
 }
 
 .link-main {
