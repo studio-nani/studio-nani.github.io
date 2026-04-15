@@ -256,6 +256,27 @@ const PRODUCTS = {
 const ORDERED_PRODUCTS = ["fortune", "myFlow"];
 const ALLOWED_LANGS = ["ko", "en", "ja"];
 const SOURCES = ["tiktok", "youtube", "instagram", "other"];
+const SOCIAL_ICONS = {
+  TT: `
+    <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M14 5v9.3a3.7 3.7 0 1 1-3.7-3.7" />
+      <path d="M14 5c1.1 2.7 2.8 4.1 5 4.4" />
+    </svg>
+  `,
+  IG: `
+    <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="5" y="5" width="14" height="14" rx="4" />
+      <circle cx="12" cy="12" r="3.4" />
+      <path d="M16.5 7.8h.1" />
+    </svg>
+  `,
+  YT: `
+    <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="4.5" y="7" width="15" height="10" rx="3" />
+      <path d="m10.8 10 4.2 2-4.2 2z" />
+    </svg>
+  `
+};
 const params = new URLSearchParams(window.location.search);
 const source = (params.get("src") || params.get("utm_source") || "other").toLowerCase();
 const safeSource = SOURCES.includes(source) ? source : "other";
@@ -366,7 +387,7 @@ function renderSocialLinks() {
       (link, index) => `
       <button class="link-row" type="button" data-social-index="${index}">
         <div class="link-main">
-          <span class="link-badge" aria-hidden="true">${link.badge}</span>
+          <span class="link-badge" aria-hidden="true">${SOCIAL_ICONS[link.badge] || link.badge}</span>
           <div class="link-copy">
             <p class="link-title">${link.name}</p>
             <p class="link-description">${link.description}</p>

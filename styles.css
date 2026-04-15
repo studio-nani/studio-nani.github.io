@@ -355,6 +355,16 @@ h1 {
   letter-spacing: 0;
 }
 
+.link-icon {
+  width: 21px;
+  height: 21px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .link-copy {
   min-width: 0;
 }
