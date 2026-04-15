@@ -244,7 +244,10 @@ const PRODUCTS = {
   myFlow: {
     iconUrl: "/assets/my-flow.png",
     pageUrl: "/my-flow/",
-    stores: [{ type: "android", labelKey: "playStore", url: "https://play.google.com/store/apps/details?id=io.studionani.myflow" }],
+    stores: [
+      { type: "ios", labelKey: "appStore", url: "https://apps.apple.com/app/id6761419936" },
+      { type: "android", labelKey: "playStore", url: "https://play.google.com/store/apps/details?id=io.studionani.myflow" }
+    ],
     legalLinks: [
       { key: "privacy", url: "/my-flow/privacy/ko/" },
       { key: "terms", url: "/my-flow/terms/ko/" },
