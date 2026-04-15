@@ -2,17 +2,16 @@ const I18N = {
   ko: {
     root: {
       eyebrow: "STUDIO NANI",
-      heroTitle: "조용하지만 분명한 앱을 만듭니다.",
-      heroDescription: "Studio Nani의 최신 앱을 바로 설치하고 브랜드를 가까이 두세요.",
-      heroKicker: "설치 우선",
-      heroSupport: "아래에서 앱을 고르고 바로 스토어로 이동하세요.",
+      heroTitle: "Studio Nani 앱 모음",
+      heroDescription: "필요한 앱을 고르고 바로 설치하세요.",
+      heroKicker: "설치 허브",
+      heroSupport: "앱 설치, 제품 안내, 운영 문서를 한곳에 모았습니다.",
       appsKicker: "Apps",
-      appsTitle: "앱 설치",
-      appsDescription: "앱을 하나 고르고 App Store 또는 Google Play로 이동하세요.",
+      appsTitle: "설치할 앱 선택",
+      appsDescription: "스토어 버튼은 설치로, 제품 페이지는 자세한 안내로 이어집니다.",
       brandKicker: "Studio Nani",
-      brandTitle: "작지만 구조가 선명한 스튜디오.",
-      brandDescription:
-        "Studio Nani는 조용한 인터페이스, 정확한 카피, 반복 가능한 카드 구조를 가진 유틸리티 앱을 만듭니다.",
+      brandTitle: "작게 만들고, 오래 쓰게 정리합니다.",
+      brandDescription: "필요한 흐름만 남긴 앱을 만들고 운영합니다.",
       linksKicker: "Links",
       linksTitle: "브랜드 더 보기"
     },
@@ -80,17 +79,16 @@ const I18N = {
   en: {
     root: {
       eyebrow: "STUDIO NANI",
-      heroTitle: "Apps with a quiet point of view.",
-      heroDescription: "Install the latest Studio Nani apps and keep the brand nearby.",
-      heroKicker: "Install first",
-      heroSupport: "Choose an app below and go straight to the store.",
+      heroTitle: "Studio Nani Apps",
+      heroDescription: "Choose an app and install it from the store.",
+      heroKicker: "Install hub",
+      heroSupport: "App installs, product notes, and operating documents live here.",
       appsKicker: "Apps",
-      appsTitle: "Install Apps",
-      appsDescription: "Pick one app and open App Store or Google Play.",
+      appsTitle: "Choose an app",
+      appsDescription: "Store buttons install the app. Product pages explain the details.",
       brandKicker: "Studio Nani",
-      brandTitle: "A small studio with a clear structure.",
-      brandDescription:
-        "We build playful utility apps with calm interfaces, precise copy, and repeatable card systems.",
+      brandTitle: "Small apps, clearly arranged.",
+      brandDescription: "We build and maintain focused apps with only the flows that matter.",
       linksKicker: "Links",
       linksTitle: "Stay connected"
     },
@@ -158,17 +156,16 @@ const I18N = {
   ja: {
     root: {
       eyebrow: "STUDIO NANI",
-      heroTitle: "静かだけど、意図がはっきりしたアプリ。",
-      heroDescription: "Studio Naniの最新アプリをすぐにインストールできます。",
-      heroKicker: "まずインストール",
-      heroSupport: "下のアプリを選んで、そのままストアへ移動してください。",
+      heroTitle: "Studio Naniアプリ一覧",
+      heroDescription: "必要なアプリを選んで、すぐにインストールできます。",
+      heroKicker: "インストールハブ",
+      heroSupport: "アプリのインストール、製品案内、運営文書をまとめています。",
       appsKicker: "Apps",
-      appsTitle: "アプリをインストール",
-      appsDescription: "アプリを選んでApp StoreまたはGoogle Playを開きます。",
+      appsTitle: "アプリを選ぶ",
+      appsDescription: "ストアボタンはインストールへ、プロダクトページは詳細案内へ進みます。",
       brandKicker: "Studio Nani",
-      brandTitle: "小さくても、構造が明確なスタジオ。",
-      brandDescription:
-        "Studio Naniは、静かなUI、正確なコピー、繰り返し使えるカード構造を持つユーティリティアプリを作ります。",
+      brandTitle: "小さく作り、長く使えるように整えます。",
+      brandDescription: "必要な流れだけを残したアプリを作り、運営します。",
       linksKicker: "Links",
       linksTitle: "関連リンク"
     },
@@ -324,14 +321,13 @@ function renderStaticText() {
 function renderStoreButtons(productKey, includeProductPage) {
   const product = PRODUCTS[productKey];
   const storeButtons = product.stores
-    .map((store, index) => {
-      const className = index === 0 ? "btn" : "btn secondary";
-      return `<a class="${className}" href="${withTracking(store.url, productKey, store.type)}">${t.buttons[store.labelKey]}</a>`;
+    .map((store) => {
+      return `<a class="btn" href="${withTracking(store.url, productKey, store.type)}">${t.buttons[store.labelKey]}</a>`;
     })
     .join("");
 
   const pageButton = includeProductPage
-    ? `<a class="btn secondary" href="${withPageParams(product.pageUrl)}">${t.buttons.productPage}</a>`
+    ? `<a class="btn subtle" href="${withPageParams(product.pageUrl)}">${t.buttons.productPage}</a>`
     : "";
 
   return `${storeButtons}${pageButton}`;
