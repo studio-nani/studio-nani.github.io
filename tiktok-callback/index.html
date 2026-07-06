@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TikTok OAuth Callback | Studio Nani</title>
+    <meta name="description" content="OAuth callback helper for Studio Nani TikTok upload tools." />
+    <meta name="theme-color" content="#f6f3ee" />
+    <link rel="stylesheet" href="/styles.css?v=light-hub-2" />
+    <style>
+      .callback { max-width: 760px; }
+      .callback .panel { padding: 28px; }
+      .codebox { margin-top: 16px; padding: 16px; border: 1px solid var(--line); border-radius: 8px; background: #fffdf9; overflow-wrap: anywhere; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+      .actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+      .action-btn { border: 0; border-radius: 8px; padding: 12px 16px; background: var(--accent-strong); color: white; font-weight: 800; cursor: pointer; }
+      .muted { color: var(--muted); line-height: 1.7; margin-top: 12px; }
+      .error { color: #a43b3b; }
+      .ok { color: var(--accent-strong); }
+    </style>
+  </head>
+  <body>
+    <main class="page callback">
+      <section class="panel" aria-labelledby="callback-title">
+        <p class="eyebrow">STUDIO NANI</p>
+        <h1 id="callback-title">TikTok OAuth Callback</h1>
+        <p class="muted">This page displays the TikTok authorization code returned to Studio Nani's internal upload tool. Copy the code back into the local tool if requested.</p>
+        <div id="status" class="codebox">Reading callback parameters…</div>
+        <div class="actions">
+          <button class="action-btn" type="button" id="copy-code">Copy code</button>
+          <button class="action-btn" type="button" id="copy-url">Copy full URL</button>
+        </div>
+        <p class="muted">No client secret is stored on this page. Token exchange is performed only by the local Studio Nani tool.</p>
+      </section>
+    </main>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const code = params.get('code') || '';
+      const state = params.get('state') || '';
+      const error = params.get('error') || '';
+      const status = document.getElementById('status');
+      if (error) {
+        status.innerHTML = '<strong class="error">OAuth error</strong><br>' + error + '<br>' + (params.get('error_description') || '');
+      } else if (code) {
+        status.innerHTML = '<strong class="ok">Authorization code received</strong><br><br><strong>code</strong><br>' + code + '<br><br><strong>state</strong><br>' + (state || '(none)');
+      } else {
+        status.innerHTML = '<strong>No code found.</strong><br>Start the TikTok OAuth flow from the Studio Nani local upload tool.';
+      }
+      document.getElementById('copy-code').addEventListener('click', async () => {
+        await navigator.clipboard.writeText(code);
+        document.getElementById('copy-code').textContent = 'Copied code';
+      });
+      document.getElementById('copy-url').addEventListener('click', async () => {
+        await navigator.clipboard.writeText(window.location.href);
+        document.getElementById('copy-url').textContent = 'Copied URL';
+      });
+    </script>
+  </body>
+</html>
